@@ -82,3 +82,30 @@ header .navbar ul li a:hover {
 #hero button {
   font-size: initial;
 }
+/* about section */
+#about {
+  padding: 100px 0;
+  text-align: center;
+  color: #212529;
+  font-size: 1.25rem;
+}
+
+#about p {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+#about button {
+  font-size: initial;
+}
+
+#about a {
+  color: #1d809f;
+  text-decoration: underline;
+  opacity: 0.8;
+  transition: opacity 0.3s;
+}
+
+#about a:hover {
+  opacity: 1;
+}
