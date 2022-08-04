@@ -1,4 +1,5 @@
 :root {
+  --white-color: 255 255 255;
   --blue-color: 50 128 159;
   --dark-color: 32 36 41;
 }
@@ -91,6 +92,11 @@ button:hover {
 
 .bg-dark {
   --current-color: var(--dark-color);
+}
+
+.bg-white {
+  --current-color: var(--white-color);
+  color: #212529;
 }
 
 .heading {
