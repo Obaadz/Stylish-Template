@@ -278,3 +278,55 @@ header .navbar ul li a:hover {
 #contact .map iframe {
   vertical-align: bottom;
 }
+/* footer */
+footer {
+  --section-padding: 50px;
+  padding: var(--section-padding) 0;
+  color: #fff;
+}
+
+footer .social {
+  --bg-on-hover: #32809fa3;
+  margin-bottom: calc(var(--section-padding) * 0.5);
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 20px;
+}
+
+footer .social i {
+  width: 64px;
+  height: 64px;
+  background-color: #32809f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+footer .social a:hover .facebook {
+  background-color: var(--bg-on-hover);
+  color: #3b5998;
+}
+
+footer .social a:hover .twitter {
+  background-color: var(--bg-on-hover);
+  color: #449cea;
+}
+
+footer .social a:hover .github {
+  background-color: var(--bg-on-hover);
+  color: #212529aa;
+}
+
+footer .copyrights {
+  color: #212529;
+  text-align: center;
+}
+
+footer .copyrights a {
+  color: #0ac6fc;
+}
