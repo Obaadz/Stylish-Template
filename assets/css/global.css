@@ -92,3 +92,15 @@ button:hover {
 .bg-dark {
   --current-color: var(--dark-color);
 }
+
+.heading {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.heading span {
+  text-transform: uppercase;
+  color: rgb(236, 184, 7);
+  font-weight: 700;
+  font-size: 0.75em;
+}
