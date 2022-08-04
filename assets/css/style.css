@@ -37,9 +37,11 @@ header .navbar {
   height: 100vh;
   transition: right 0.5s;
 }
+
 header span[show] ~ .navbar {
   right: 0;
 }
+
 header .navbar h2 {
   width: max-content;
   background-color: rgb(46, 121, 151);
@@ -66,6 +68,17 @@ header .navbar ul li a:hover {
   opacity: 0.8;
   padding-left: 15px;
 }
+
+@media (max-width: 767px) {
+  header .navbar {
+    width: 100vw;
+    right: calc(-100% - 100vw);
+  }
+  header .navbar h2 {
+    width: unset;
+  }
+}
+
 /* hero/landing */
 #hero {
   width: 100vw;
@@ -154,4 +167,18 @@ header .navbar ul li a:hover {
 #services .content .box h3 {
   margin-top: 10px;
   margin-bottom: 5px;
+}
+/* download section */
+#download {
+  padding: calc(var(--section-padding) * 1.5) 0;
+  background: url("../img/bg-callout.jpg");
+  background-size: cover;
+  text-align: center;
+  color: #212529;
+  font-size: 1.5rem;
+}
+
+#download button {
+  font-size: initial;
+  margin-top: 1.5rem;
 }
