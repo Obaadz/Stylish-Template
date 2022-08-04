@@ -23,6 +23,7 @@ header span {
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s;
+  z-index: 998;
 }
 
 header span:hover {
@@ -37,7 +38,6 @@ header .navbar {
   color: #fff;
   height: 100vh;
   transition: right 0.5s;
-  z-index: 99;
 }
 
 header span[show] ~ .navbar {
@@ -198,6 +198,12 @@ header .navbar ul li a:hover {
   display: grid;
   grid-template-columns: auto auto;
   margin-top: calc(var(--section-padding) * 0.5);
+}
+
+@media (max-width: 767px) {
+  #portfolio .content {
+    grid-template-columns: auto;
+  }
 }
 
 #portfolio .content .box {
