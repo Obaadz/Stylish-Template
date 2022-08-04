@@ -7,9 +7,11 @@ header {
   position: fixed;
   right: 0px;
   top: 0px;
+  z-index: 999;
 }
 
 header span {
+  position: relative;
   margin: 10px 10px 20px 0;
   width: 50px;
   height: 50px;
@@ -32,10 +34,10 @@ header .navbar {
   right: calc(-100% - 200px);
   top: 0;
   background-color: #32809f;
-  z-index: -1;
   color: #fff;
   height: 100vh;
   transition: right 0.5s;
+  z-index: 99;
 }
 
 header span[show] ~ .navbar {
@@ -181,4 +183,72 @@ header .navbar ul li a:hover {
 #download button {
   font-size: initial;
   margin-top: 1.5rem;
+}
+/* portfolio section */
+#portfolio {
+  padding: var(--section-padding) 0;
+  color: #fff;
+}
+
+#portfolio .heading {
+  color: #212529;
+}
+
+#portfolio .content {
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-top: calc(var(--section-padding) * 0.5);
+}
+
+#portfolio .content .box {
+  position: relative;
+  background-size: cover;
+  height: 350px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+
+#portfolio .content .box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2a2a2a;
+  opacity: 0.3;
+  transition: transform 0.3s;
+}
+
+#portfolio .content .box img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s;
+}
+
+#portfolio .content .box h3 {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+#portfolio .content .box h3,
+#portfolio .content .box p {
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+#portfolio .content .box:hover img,
+#portfolio .content .box:hover::after,
+#portfolio .content .box:hover h3,
+#portfolio .content .box:hover p {
+  transform: scale(0.9);
 }
